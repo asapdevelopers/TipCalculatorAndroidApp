@@ -1,0 +1,224 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity" >
+
+    <TextView
+        android:id="@+id/sharedBy_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/button3"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="8dp"
+        android:textSize="26sp" 
+        android:text="@string/sharedBy_label" />
+
+    <TextView
+        android:id="@+id/total_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/perPerson_Value"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="8dp"
+        android:textSize="26sp" 
+        android:text="@string/total_label" />
+
+    <TextView
+        android:id="@+id/perPerson_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/button4"
+        android:layout_marginTop="18dp"
+        android:layout_marginLeft="8dp"
+        android:textSize="26sp" 
+        android:text="@string/perPerson_label" />
+
+    <TextView
+        android:id="@+id/tip_calculation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/button2"
+        android:layout_alignBottom="@+id/button2"
+        android:layout_toRightOf="@+id/tip_percentage"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/total_Value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/total_label"
+        android:layout_alignRight="@+id/button6"
+        android:textSize="26sp" />
+
+    <TextView
+        android:id="@+id/perPerson_Value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/perPerson_label"
+        android:layout_alignBottom="@+id/perPerson_label"
+        android:layout_alignRight="@+id/button6"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/bill_label"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/edit_message"
+        android:layout_alignRight="@+id/perPerson_label"
+        android:layout_alignTop="@+id/edit_message"
+        android:layout_marginLeft="8dp"
+        android:text="@string/bill_label"
+        android:textSize="26sp" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_above="@+id/perPerson_label"
+        android:layout_alignLeft="@+id/button1"
+        android:layout_alignRight="@+id/button6"
+        android:layout_alignParentEnd="false"
+        android:layout_alignParentStart="false"
+        android:layout_toLeftOf="@+id/perPerson_Value"
+        android:background="@drawable/roundedrectanglebutton"
+        android:onClick="decreaseShare"
+        android:text="@string/button_minus"
+        android:textColor="@android:color/black" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_alignBaseline="@+id/button2"
+        android:layout_alignBottom="@+id/button2"
+        android:layout_alignParentEnd="false"
+        android:layout_alignParentRight="false"
+        android:layout_alignParentStart="false"
+        android:layout_alignRight="@+id/button6"
+        android:background="@drawable/roundedrectanglebutton"
+        android:onClick="decreaseTip"
+        android:text="@string/button_minus"
+        android:textColor="@android:color/black" />
+
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="100dp"
+        android:layout_height="45dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/button5"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/roundedrectanglebutton"
+        android:onClick="clearAll"
+        android:text="@string/clear"
+        android:textColor="@android:color/black"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_alignLeft="@+id/button4"
+        android:layout_alignParentEnd="false"
+        android:layout_alignParentStart="false"
+        android:layout_below="@+id/bill_label"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/roundedrectanglebutton"
+        android:onClick="increaseTip"
+        android:text="@string/button_plus"
+        android:textColor="@android:color/black" />
+
+    <EditText
+        android:id="@+id/edit_message"
+        android:layout_width="150dp"
+        android:layout_height="30dp"
+        android:layout_alignParentEnd="false"
+        android:layout_alignParentStart="false"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/button1"
+        android:layout_marginTop="17dp"
+        android:background="@drawable/roundededittext"
+        android:ems="10"
+        android:gravity="right"
+        android:hint="@string/edit_bill"
+        android:inputType="numberDecimal"
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:id="@+id/tip_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tip_calculation"
+        android:layout_alignBottom="@+id/tip_calculation"
+        android:layout_alignLeft="@+id/sharedBy_label"
+        android:text="@string/tip_label"
+        android:textSize="26sp" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_alignLeft="@+id/button6"
+        android:layout_alignParentEnd="false"
+        android:layout_alignParentStart="false"
+        android:layout_below="@+id/tip_percentage"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/roundedrectanglebutton"
+        android:onClick="increaseShare"
+        android:text="@string/button_plus"
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:id="@+id/tip_percentage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tip_calculation"
+        android:layout_alignBottom="@+id/tip_calculation"
+        android:layout_toRightOf="@+id/tip_label"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_alignLeft="@+id/total_label"
+        android:layout_below="@+id/total_Value"
+        android:layout_marginTop="26dp"
+        android:background="@drawable/roundedbutton"
+        android:drawableTop="@drawable/config_icon"
+        android:onClick="goToSettings"
+        android:textColor="@android:color/black"
+        android:textSize="30sp"
+        android:textStyle="bold|italic"
+        android:typeface="serif" />
+
+    <Button
+        android:id="@+id/button7"
+        android:layout_width="120dp"
+        android:layout_height="45dp"
+        android:layout_alignTop="@+id/button5"
+        android:layout_toRightOf="@+id/total_label"
+        android:background="@drawable/roundedrectanglebutton"
+        android:onClick="roundUp"
+        android:text="@string/roundup"
+        android:textColor="@android:color/black"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/sharedBy_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/sharedBy_label"
+        android:layout_alignBottom="@+id/sharedBy_label"
+        android:layout_alignRight="@+id/button7"
+        android:layout_toRightOf="@+id/perPerson_label"
+        android:text="shVal"
+        android:textSize="18sp" />
+
+</RelativeLayout>

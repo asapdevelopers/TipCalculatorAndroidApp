@@ -1,0 +1,61 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="250dp"
+    tools:context=".SettingsActivity" >
+
+    <EditText
+        android:id="@+id/tax_value"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/checkBoxTax"
+        android:layout_alignBottom="@+id/checkBoxTax"
+        android:layout_marginRight="17dp"
+        android:layout_toLeftOf="@+id/textView1"
+        android:ems="10"
+        android:hint="@string/hint_tax"
+        android:enabled="false"
+        android:inputType="numberDecimal"
+        android:gravity="right" />
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/checkBoxTax"
+        android:layout_centerHorizontal="true"
+        android:onClick="goToAsap"
+        android:src="@drawable/asapmobility" />
+
+    <Button
+        android:id="@+id/button_ok"
+        android:layout_width="100dp"
+        android:layout_height="45dp"
+        android:layout_below="@+id/imageView1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="14dp"
+        android:background="@drawable/roundedrectanglebutton"
+        android:onClick="goBack"
+        android:text="@string/ok"
+        android:textSize="20sp" 
+        android:layout_marginBottom="20dp"/>
+
+    <CheckBox
+        android:id="@+id/checkBoxTax"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:onClick="enableTax"
+        android:text="@string/tax" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/tax_value"
+        android:text="@string/perc_symbol"
+        android:textSize="30sp" />
+
+</RelativeLayout>
